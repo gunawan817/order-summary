@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url(https://fonts.google.com/specimen/Red+Hat+Display);
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        font-family: "Red Hat Display", sans-serif;
+        font-size: 16px;
+        background-color: hsl(225, 100%, 94%);
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .container {
+        width: 450px;
+        margin: auto;
+        border-radius: 20px;
+        background-color: #fff;
+        /* min-height: 100vh; */
+        box-shadow: 2px 3px 50px 10px rgba(0, 0, 0, 0.1);
+      }
+      .hero {
+        border-radius: 20px 20px 0 0;
+      }
+      .content h1,
+      .content p {
+        text-align: center;
+      }
+      .content h1 {
+        color: hsl(223, 47%, 23%);
+      }
+      .container p {
+        color: #999;
+      }
+      .desc {
+        margin: 20px;
+      }
+      .content {
+        width: 380px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        /* background-color: salmon; */
+        margin: auto;
+        padding: 40px 0;
+      }
+      .plan {
+        width: 350px;
+        background-color: hsl(225, 100%, 98%);
+        border-radius: 10px;
+        padding: 20px;
+      }
+      .plan p {
+        text-align: center;
+        float: left;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+      }
+      .plan .plan-title {
+        color: hsl(223, 47%, 23%);
+        font-weight: 600;
+      }
+      .plan img {
+        float: left;
+      }
+      .plan .price {
+        margin-top: 10px;
+      }
+      .plan a {
+        color: hsl(245, 75%, 52%);
+        font-weight: 600;
+        float: right;
+      }
+      .plan a:active {
+        text-decoration: none;
+        color: hsla(245, 75%, 52%, 0.7);
+      }
+      .music {
+        background-color: hsl(225, 100%, 94%);
+        border-radius: 50%;
+      }
+      .btn {
+        width: 350px;
+        margin-top: 20px;
+        background-color: hsl(245, 75%, 52%);
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 15px 15px hsl(225, 100%, 94%);
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+      }
+      .btn:active {
+        background-color: hsla(245, 75%, 52%, 0.7);
+      }
+      .cancel {
+        margin-top: 20px;
+        text-decoration: none;
+        color: #999;
+        font-weight: 600;
+      }
+      .cancel:active {
+        color: hsl(223, 47%, 23%);
+      }
+
+      @media (max-width: 498px) {
+        .container {
+          width: 100%;
+        }
+
+        .container .hero {
+          width: 100%;
+        }
+
+        .content {
+          width: 100%;
+        }
+
+        .plan {
+          width: 90%;
+        }
+
+        .btn {
+          width: 90%;
+        }
+      }
+      @media (max-width: 281px) {
+        .content .plan-title,
+        .content .plan-price,
+        .content .plan a {
+          font-size: 14px;
+        }
+      }
+      svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        /* width: 100%; */
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#0099ff"
+        fill-opacity="1"
+        d="M0,64L48,58.7C96,53,192,43,288,74.7C384,107,480,181,576,208C672,235,768,213,864,213.3C960,213,1056,235,1152,256C1248,277,1344,299,1392,309.3L1440,320L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+      ></path>
+    </svg> -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 437"><path fill="#D6E1FF" fill-rule="evenodd" d="M0 349.974c218.558 116.035 460.05 116.035 724.475 0s502.933-116.035 715.525 0V0H0v349.974z" /></svg>
+    <div class="container">
+      <img src="images\illustration-hero.svg" class="hero" alt="" />
+      <div class="content">
+        <h1>Order Summary</h1>
+
+        <p class="desc">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+        <div class="plan">
+          <img src="images\icon-music.svg" class="music" alt="" />
+          <p class="plan-title">Annual Plan</p>
+          <br />
+          <p class="price">$59.99/year</p>
+          <a href="">Change</a>
+        </div>
+        <a href="" class="btn">Proceed to payment</a>
+        <a href="" class="cancel">Cancel Order</a>
+      </div>
+    </div>
+    <br /><br /><br />
+    <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Gunawan Saputra</a>.</div>
+  </body>
+</html>
